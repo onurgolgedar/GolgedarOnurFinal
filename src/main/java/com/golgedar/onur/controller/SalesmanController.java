@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 // 300365517
 // https://github.com/onurgolgedar/GolgedarOnurFinal
 
@@ -23,18 +25,11 @@ public class SalesmanController {
         return "index";
     }
 
-    @GetMapping("/salesman")
-    public String showSalesmen(Model model) {
-        model.addAttribute("transactions", salesmanService.findAll());
-        return "index";
-    }
-
     @PostMapping("/salesman")
     public String saveSalesman(@ModelAttribute Salesman salesman) {
-        // Everything looks fine but it does not work!
+        // It looks okay in the console but it does not add the salesman to the database
         System.out.println(salesman);
         salesmanService.save(salesman);
         return "index";
     }
-
 }
