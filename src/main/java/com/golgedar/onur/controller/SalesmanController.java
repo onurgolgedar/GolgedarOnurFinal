@@ -27,7 +27,7 @@ public class SalesmanController {
 
     @PostMapping("/salesman")
     public String saveSalesman(@ModelAttribute Salesman salesman) {
-        // It looks okay in the console but it does not add the salesman to the database
+        // It looks okay in the console, but it does not add the salesman to the database
         System.out.println(salesman);
         salesmanService.save(salesman);
         return "index";
