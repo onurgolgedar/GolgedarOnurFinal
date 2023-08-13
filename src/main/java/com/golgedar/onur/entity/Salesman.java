@@ -6,6 +6,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
+// 300365517
+// https://github.com/onurgolgedar/GolgedarOnurFinal
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -16,7 +19,7 @@ public class Salesman {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double amount;
+    private Double amount;
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date dot;

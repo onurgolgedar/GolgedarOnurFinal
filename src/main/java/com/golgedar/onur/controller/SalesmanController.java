@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+// 300365517
+// https://github.com/onurgolgedar/GolgedarOnurFinal
+
 @Controller
 public class SalesmanController {
 
@@ -28,6 +31,7 @@ public class SalesmanController {
 
     @PostMapping("/salesman")
     public String saveSalesman(@ModelAttribute Salesman salesman) {
+        // Everything looks fine but it does not work!
         System.out.println(salesman);
         salesmanService.save(salesman);
         return "index";
